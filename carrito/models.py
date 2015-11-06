@@ -31,7 +31,7 @@ class Compra(models.Model):
 
 class DetalleCompra(models.Model):
     cod_compra = models.ForeignKey(Compra)
-    cantidad = models.IntegerField
+    cantidad = models.IntegerField()
     cod_producto = models.ForeignKey(Producto)
     precio_parcial = models.DecimalField(max_digits=9, decimal_places=2)
 
