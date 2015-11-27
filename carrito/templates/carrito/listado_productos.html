@@ -1,0 +1,11 @@
+{% extends 'carrito/base.html' %}
+
+{% block content %}
+  {% for producto in productos %}
+          <div class="post">
+              <h1><a href="{% url 'carrito.views.detalle_producto' pk=producto.pk %}">{{ producto.nombre }}</a></h1>
+              <p>{{ producto.descripcion|linebreaks }}</p>
+              <p>{{ producto.precio }}</p>
+          </div>
+  {% endfor %}
+{% endblock content %}

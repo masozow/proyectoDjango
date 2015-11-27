@@ -1,0 +1,16 @@
+{% extends 'carrito/base.html' %}
+
+{% block content %}
+  {% for compra in compras %}
+          <div class="post">
+            <div class="date">
+               {{ compra.fecha_compra }}
+           </div>
+              <h1><a href="{% url 'carrito.views.detalle_compra' pk=compra.pk %}">{{ compra.cliente }}</a></h1>
+              <p>{{ compra.direccion_entrega }}</p>
+              <p>{{ compra.tarjeta_credito }}</p>
+              <p>{{ compra.telefonos_cliente }}</p>
+              <p>{{ compra.cod_producto }}</p>
+          </div>
+  {% endfor %}
+{% endblock content %}

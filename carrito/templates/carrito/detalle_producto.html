@@ -1,0 +1,10 @@
+{% extends 'carrito/base.html' %}
+
+    {% block content %}
+    <a class="btn btn-default" href="{% url 'editar_producto' pk=producto.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <div class="post">
+            <h1>{{ producto.nombre }}</h1>
+            <p>{{ producto.descripcion }}</p>
+            <p>{{ producto.precio }}</p>
+        </div>
+    {% endblock %}
